@@ -4,7 +4,7 @@ $status = 'error';
 
 
 //Google reCAPTCHA API key configuration
-$sitekey = '6Lf7X6wUAAAAAKQl1kvCf7oHeVC-he-aZSg4d_Kb';
+$sitekey = '';
 
 
 //If the form is submitted
@@ -17,7 +17,7 @@ if(isset($_POST['send'])) {
         //Validate reCAPTCHA box
         if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
 
-            $secretKey = '6Lf7X6wUAAAAAPNzvGOIy2QLdnGBJJIY7E8sT8ju';
+            $secretKey = '';
             //Verify the reCaptcha response
             $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' .$secretKey. '&response=' .$_POST['g-recaptcha-response']);
 
